@@ -15,7 +15,11 @@ class Test extends Component {
     const socket = io('http://localhost:5000/',{query:{id:'123'}});
     // const socket = io({path:'http://localhost:5000/'});
 
-    socket.emit('send_message',"123")
+    socket.emit('send_message',"123");
+
+    socket.on("username", (message) => {
+      console.log(message);
+    });
 
     socket.on("receive_message", (message) => {
       console.log(message);

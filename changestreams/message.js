@@ -1,11 +1,3 @@
-const {
-  userJoin,
-  getCurrentUser,
-  userLeave,
-  getRoomUsers,
-  getAllUsers
-} = require('../utils/users');
-
 const message= (conn,io)=>{
     const test = conn.collection("test").watch();
   
